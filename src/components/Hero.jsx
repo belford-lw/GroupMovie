@@ -14,17 +14,14 @@ export default function Hero() {
         text-white
       "
     >
-      {/* Kuchliroq blur effektlar */}
       <div className="absolute top-[-100px] right-[-60px] w-[300px] h-[300px] bg-[#4c1d95]/45 blur-[150px] rounded-full"></div>
       <div className="absolute bottom-[-120px] left-[-60px] w-[300px] h-[300px] bg-[#1e3a8a]/45 blur-[160px] rounded-full"></div>
 
-      {/* Rasm */}
       <img
         src="https://www.plex.tv/wp-content/uploads/2025/03/watch-free-mobile.png"
         className="w-[420px] md:w-[500px] drop-shadow-2xl transition-transform duration-500 hover:scale-105"
       />
 
-      {/* Matn qismi */}
       <div className="max-w-xl text-center md:text-left">
         <h1 className="text-4xl md:text-5xl font-extrabold leading-tight">
           It has never been easier
@@ -41,11 +38,11 @@ export default function Hero() {
         </p>
 
         <div className="flex items-center justify-center md:justify-start gap-4">
-          <button className="px-10 py-4 bg-yellow-400 hover:bg-yellow-500 active:bg-yellow-600 rounded-full text-lg font-semibold shadow-xl transition-transform hover:scale-105 text-gray-900">
+          <button className="px-10 py-4 cursor-pointer bg-yellow-400 hover:bg-yellow-500 active:bg-yellow-600 rounded-full text-lg font-semibold shadow-xl transition-transform hover:scale-105 text-gray-900">
             Watch Free
           </button>
 
-          <button className="px-10 py-4 border border-white/40 hover:bg-white/10 rounded-full text-lg font-semibold transition">
+          <button className="px-10 py-4 cursor-pointer border border-white/40 hover:bg-white/10 rounded-full text-lg font-semibold transition">
             Learn More
           </button>
         </div>

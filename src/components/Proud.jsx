@@ -1,5 +1,4 @@
-import React from "react";
-import { img } from "../constants";
+import { img } from "../constants/index";
 
 const Proud = () => {
   return (

@@ -1,13 +1,13 @@
-import Rasm from '../public/assets/rasm.jpg'
-import Rasm1 from '../public/assets/rasm1.jpg'
-import Rasm2 from '../public/assets/rasm2.jpg'
-import Rasm3 from '../public/assets/rasm3.jpg'
-import Rasm4 from '../public/assets/rasm4.jpg'
-import Rasm5 from '../public/assets/rasm5.jpg'
-import Rasm6 from '../public/assets/rasm6.jpg'
-import Rasm7 from '../public/assets/rasm7.jpg'
-import Rasm8 from '../public/assets/Rasm8.jpg'
-import Rasm9 from '../public/assets/rasm9.jpg'
+import Rasm from '../assets/rasm.jpg'
+import Rasm1 from '../assets/rasm1.jpg'
+import Rasm2 from '../assets/rasm2.jpg'
+import Rasm3 from '../assets/rasm3.jpg'
+import Rasm4 from '../assets/rasm4.jpg'
+import Rasm5 from '../assets/rasm5.jpg'
+import Rasm6 from '../assets/rasm6.jpg'
+import Rasm7 from '../assets/rasm7.jpg'
+import Rasm8 from '../assets/rasm8.jpg'
+import Rasm9 from '../assets/rasm9.jpg'
 
 export const items = [
   {
