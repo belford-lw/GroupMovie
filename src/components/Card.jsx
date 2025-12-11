@@ -1,11 +1,9 @@
-import React from 'react';
-import { items } from "../Data"; 
-import { items1 } from '../Data';
+import { items } from "../constants/index"; 
+import { items1 } from '../constants/index';
 
 const Card = () => {
   return (
     <div>
-      {/* Section 1 */}
       <h1 className='text-center pt-24 text-3xl md:text-4xl font-medium'>Playing now on Plex</h1>
       <div className='flex flex-col md:flex-row md:flex-wrap justify-center gap-8 mt-16'>
         {items.map(item => (
@@ -22,7 +20,6 @@ const Card = () => {
         </button>
       </div>
 
-      {/* Section 2 */}
       <div className='bg-neutral-200 h-auto mt-20 py-25'>
         <h1 className='text-3xl md:text-4xl font-bold text-center'>Don’t forget free TV.</h1>
         <p className='text-center pt-6 text-gray-600 max-w-xl mx-auto'>
