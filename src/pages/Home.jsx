@@ -1,15 +1,17 @@
-import Hero from '../components/Hero'
-import Footer from '../components/Footer'
-import Card from '../components/Card'
+import Hero from "../components/Hero";
+import Footer from "../components/Footer";
+import Card from "../components/Card";
+import Movice from "../components/Movice";
 
 const Home = () => {
   return (
     <>
-        <Hero/>
-        <Card/>
-        <Footer/>   
+      <Movice />
+      <Hero />
+      <Card />
+      <Footer />
     </>
-  )
-}
+  );
+};
 
-export default Home
+export default Home;
