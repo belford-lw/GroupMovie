@@ -1,1 +1,13 @@
 @import "tailwindcss";
+
+.button {
+  width: 200px;
+  height: 50px;
+  border-radius: 30px;
+  font-size: 18px;
+  color: white;
+  font-weight: 700;
+  margin-top: 30px;
+  margin-left: 30%;
+  background: #e5a00d;
+}
