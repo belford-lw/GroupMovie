@@ -41,11 +41,11 @@ export default function Hero() {
         </p>
 
         <div className="flex items-center justify-center md:justify-start gap-4">
-          <button className="px-10 py-4 bg-yellow-400 hover:bg-yellow-500 active:bg-yellow-600 rounded-full text-lg font-semibold shadow-xl transition-transform hover:scale-105 text-gray-900">
+          <button className="px-10 py-4 cursor-pointer bg-yellow-400 hover:bg-yellow-500 active:bg-yellow-600 rounded-full text-lg font-semibold shadow-xl transition-transform hover:scale-105 text-gray-900">
             Watch Free
           </button>
 
-          <button className="px-10 py-4 border border-white/40 hover:bg-white/10 rounded-full text-lg font-semibold transition">
+          <button className="px-10 py-4 cursor-pointer border border-white/40 hover:bg-white/10 rounded-full text-lg font-semibold transition">
             Learn More
           </button>
         </div>
