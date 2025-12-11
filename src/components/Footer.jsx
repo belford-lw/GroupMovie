@@ -2,9 +2,17 @@ import React from 'react';
 
 export default function App() {
   return (
+<<<<<<< HEAD
     <footer className="bg-gray-800 text-white pt-12 pb-8">
       <div className="container mx-auto px-6">
         <div className="grid grid-cols-1 md:grid-cols-5 gap-8">
+=======
+    <div>
+    
+    </div>
+  )
+}
+>>>>>>> 0e5304f453259d4b9009f5fdee63fe157a1d631d
 
           <div>
             <h3 className="font-bold text-lg mb-4">Company</h3>
