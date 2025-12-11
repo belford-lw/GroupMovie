@@ -3,15 +3,6 @@ import { Link } from "react-router-dom";
 
 const Navbar = () => {
   return (
-<<<<<<< HEAD
-    <div>
-        Navbar qism
-    </div>
-  )
-}
- 
-export default Navbar
-=======
     <div className="w-full">
       <div className=" flex justify-around items-center bg-black/80 rounded-2xl h-[55px]">
         <img
@@ -35,8 +26,6 @@ export default Navbar
         </ul>
       </div>
     </div>
-  );
-};
-
+  )
+}
 export default Navbar;
->>>>>>> c43d33c311b853ef0bc1156234008d2e522b2107
