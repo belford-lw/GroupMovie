@@ -7,7 +7,7 @@ const Proud = () => {
       <div className="lg:p-[70px_90px] md:p-[20px_50px] sm:p-[15px_30px] p-[10px_24px] lg:flex justify-between">
         <div className="grid gap-5 pb-[50px]">
           <h1 className=" font-bold md:leading-12 md:text-[40px] text-[30px] md:w-[100px]">
-            We’re compatible.
+            We’re compatible. Proud
           </h1>
           <p className="opacity-75 text-[18px] lg:w-[230px] font-light">
             Stream Plex from just about any phone, tablet, smart TV, gaming
