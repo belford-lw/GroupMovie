@@ -1,4 +1,7 @@
-import React from "react";
+import React, { useEffect } from "react";
+import AOS from "aos";
+import "aos/dist/aos.css";
+
 import {
   Typography,
   Button,
@@ -14,6 +17,7 @@ import {
 export default function App() {
   const usersCount = "24,318";
   const since = "3 yil 2 oy";
+
   const testimonials = [
     {
       name: "Aliaka",
@@ -32,9 +36,16 @@ export default function App() {
     },
   ];
 
+  useEffect(() => {
+    AOS.init({ duration: 900, once: true });
+  }, []);
+
   return (
     <Box>
+
+      {/* ==== HERO SECTION ==== */}
       <Box
+        data-aos="fade-up"
         sx={{
           textAlign: "center",
           py: { xs: 5, md: 8 },
@@ -42,7 +53,11 @@ export default function App() {
           bgcolor: "#f5f5f5",
         }}
       >
-        <Typography variant="h4" sx={{ mb: 1, fontSize: { xs: "28px", md: "40px" } }}>
+        <Typography
+          variant="h4"
+          sx={{ mb: 1, fontSize: { xs: "28px", md: "40px" } }}
+          data-aos="zoom-in"
+        >
           Kinolar olamiga xush kelibsiz
         </Typography>
 
@@ -53,12 +68,15 @@ export default function App() {
             fontSize: { xs: "14px", md: "16px" },
             px: { xs: 2, md: 20 },
           }}
+          data-aos="fade-up"
+          data-aos-delay="150"
         >
           Bu yerda faqat qo'rqinchli va fantastik kinolar ko'rishingiz mumkin.
         </Typography>
 
         <Button
-          variant="contained"   
+          variant="contained"
+          data-aos="zoom-in-up"
           sx={{
             bgcolor: "yellow",
             width: { xs: "130px", md: "150px" },
@@ -70,21 +88,21 @@ export default function App() {
         </Button>
       </Box>
 
+      {/* ==== COUNTER CARDS ==== */}
       <Container sx={{ py: 6 }}>
-        <Grid
-          container
-          spacing={4}
-          justifyContent="center"
-        >
-          <Grid item xs={12} sm={10} md={6}>
+        <Grid container spacing={4} justifyContent="center">
+
+          <Grid item xs={12} sm={10} md={6} data-aos="fade-right">
             <Card elevation={3}>
               <CardContent sx={{ textAlign: "center" }}>
                 <Typography variant="subtitle2" color="text.secondary">
                   Kinoni tomosha qilganlar
                 </Typography>
+
                 <Typography variant="h4" sx={{ fontWeight: 700 }}>
                   {usersCount}
                 </Typography>
+
                 <Typography variant="body2" color="text.secondary" sx={{ mt: 1 }}>
                   Kino ko'ruvchilar soni
                 </Typography>
@@ -92,27 +110,32 @@ export default function App() {
             </Card>
           </Grid>
 
-          <Grid item xs={12} sm={10} md={6}>
+          <Grid item xs={12} sm={10} md={6} data-aos="fade-left">
             <Card elevation={3}>
               <CardContent sx={{ textAlign: "center" }}>
                 <Typography variant="subtitle2" color="text.secondary">
                   Kinoning faoliyat muddati
                 </Typography>
+
                 <Typography variant="h4" sx={{ fontWeight: 700 }}>
                   {since}
                 </Typography>
+
                 <Typography variant="body2" color="text.secondary" sx={{ mt: 1 }}>
                   Shu vaqtdan beri kino ko'rilgan
                 </Typography>
               </CardContent>
             </Card>
           </Grid>
+
         </Grid>
       </Container>
 
+      {/* ==== TESTIMONIALS ==== */}
       <Container sx={{ py: 4, pb: 8 }}>
         <Typography
           variant="h5"
+          data-aos="fade-up"
           sx={{
             textAlign: "center",
             mb: 3,
@@ -124,16 +147,20 @@ export default function App() {
 
         <Grid container spacing={3} justifyContent="center">
           {testimonials.map((t, i) => (
-            <Grid item xs={12} sm={6} md={4} key={i}>
+            <Grid
+              item
+              xs={12}
+              sm={6}
+              md={4}
+              key={i}
+              data-aos="zoom-in"
+              data-aos-delay={i * 150}
+            >
               <Card sx={{ height: "100%" }}>
                 <CardContent>
-                  <Stack
-                    direction="row"
-                    spacing={2}
-                    alignItems="center"
-                    sx={{ mb: 1 }}
-                  >
+                  <Stack direction="row" spacing={2} alignItems="center" sx={{ mb: 1 }}>
                     <Avatar sx={{ width: 45, height: 45 }}>{t.avatar}</Avatar>
+
                     <Box>
                       <Typography variant="subtitle1" sx={{ fontWeight: 600 }}>
                         {t.name}
@@ -147,12 +174,15 @@ export default function App() {
                   <Typography variant="body2" color="text.secondary">
                     {t.text}
                   </Typography>
+
                 </CardContent>
               </Card>
             </Grid>
           ))}
         </Grid>
+
       </Container>
+
     </Box>
   );
 }

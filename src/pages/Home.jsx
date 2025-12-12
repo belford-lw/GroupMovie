@@ -9,8 +9,8 @@ import Movice from "../components/Movice";
 const Home = () => {
   return (
     <>
-        <Hero/>
         <Movice />
+        <Hero/>
         <Card/>
         <Proud/>
         <Static/>

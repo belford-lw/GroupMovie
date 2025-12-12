@@ -1,6 +1,13 @@
-import React from "react";
+import React, { useEffect } from "react";
+import AOS from "aos";
+import "aos/dist/aos.css";
 
 export default function Hero() {
+
+  useEffect(() => {
+    AOS.init({ duration: 1000, once: true });
+  }, []);
+
   return (
     <div
       className="
@@ -12,32 +19,44 @@ export default function Hero() {
         flex flex-col md:flex-row items-center justify-center gap-20 
         relative overflow-hidden
         text-white
+        mt-15
       "
     >
-      <div className="absolute top-[-100px] right-[-60px] w-[300px] h-[300px] bg-[#4c1d95]/45 blur-[150px] rounded-full"></div>
-      <div className="absolute bottom-[-120px] left-[-60px] w-[300px] h-[300px] bg-[#1e3a8a]/45 blur-[160px] rounded-full"></div>
+      <div
+        className="absolute top-[-100px] right-[-60px] w-[300px] h-[300px] bg-[#4c1d95]/45 blur-[150px] rounded-full"
+      ></div>
+
+      <div
+        className="absolute bottom-[-120px] left-[-60px] w-[300px] h-[300px] bg-[#1e3a8a]/45 blur-[160px] rounded-full"
+      ></div>
 
       <img
         src="https://www.plex.tv/wp-content/uploads/2025/03/watch-free-mobile.png"
         className="w-[420px] md:w-[500px] drop-shadow-2xl transition-transform duration-500 hover:scale-105"
+        data-aos="fade-right"
       />
 
-      <div className="max-w-xl text-center md:text-left">
+      <div className="max-w-xl text-center md:text-left" data-aos="fade-left">
         <h1 className="text-4xl md:text-5xl font-extrabold leading-tight">
           It has never been easier
           <br />
           to watch free
           <br />
-          <span className="text-yellow-300 drop-shadow-md">movies online.</span>
+          <span className="text-yellow-300 drop-shadow-md">
+            movies online.
+          </span>
         </h1>
 
         <p className="text-gray-200 mt-6 mb-10 text-lg leading-relaxed">
-          Once you register for a free account with Plex, we’ll keep your place from
-          screen to screen with ease. No matter what device you choose, your free
-          movies will always pick up where you left off.
+          Once you register for a free account with Plex, we’ll keep your place
+          from screen to screen with ease. No matter what device you choose, your
+          free movies will always pick up where you left off.
         </p>
 
-        <div className="flex items-center justify-center md:justify-start gap-4">
+        <div
+          className="flex items-center justify-center md:justify-start gap-4"
+          data-aos="zoom-in"
+        >
           <button className="px-10 py-4 cursor-pointer bg-yellow-400 hover:bg-yellow-500 active:bg-yellow-600 rounded-full text-lg font-semibold shadow-xl transition-transform hover:scale-105 text-gray-900">
             Watch Free
           </button>
